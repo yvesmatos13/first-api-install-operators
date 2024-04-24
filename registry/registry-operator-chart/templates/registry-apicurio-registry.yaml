@@ -1,0 +1,16 @@
+apiVersion: registry.apicur.io/v1
+kind: ApicurioRegistry
+metadata:
+  name: apicurio-registry
+  namespace: {{ .Values.metadata.namespace }}
+spec:
+  configuration:
+    kafkasql:
+      bootstrapServers: 'my-cluster-kafka-bootstrap.{{ .Values.metadata.namespace }}.svc:9092'
+    persistence: kafkasql
+    security:
+      keycloak:
+        apiClientId: {{ .Values.rhsso.apiClientId }}
+        realm:  {{ .Values.rhsso.realm }}
+        uiClientId: {{ .Values.rhsso.uiClientId }}
+        url: '{{ .Values.rhsso.url }}'

@@ -1,0 +1,9 @@
+---
+# Source: apicurio-design-operator-chart/templates/apicurio-design-instance.yaml
+apiVersion: apicur.io/v1
+kind: Apicurito
+metadata:
+  name: apicurito-service
+  namespace: design
+spec:
+  size: 3

@@ -1,0 +1,17 @@
+---
+# Source: apicurio-design-operator-chart/templates/apicurio-design-operator.yaml
+# Source: rhsso-operator-chart/templates/operator.yaml
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: fuse-apicurito
+  namespace: design
+  labels:
+    operators.coreos.com/service-registry-operator.openshift-operators: ''
+spec:
+  channel: fuse-apicurito-7.12.x
+  installPlanApproval: Automatic
+  name: fuse-apicurito
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV:

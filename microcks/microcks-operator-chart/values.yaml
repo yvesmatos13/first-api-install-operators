@@ -1,0 +1,18 @@
+metadata:
+  name: microcks
+  namespace: microcks
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: microcks
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: "microcks-operator.v1.8.0"
+microcks:
+  version: 1.5.2
+  url: microcks.apps.cluster-qxhp4.qxhp4.sandbox2918.opentlc.com
+keycloak:
+  realm: microcks
+  url: sso-rhsso.apps.cluster-qxhp4.qxhp4.sandbox2918.opentlc.com:443/auth
+  serviceAccount: microcks-serviceaccount
+  serviceAccountCredentials: ab54d329-e435-41ae-a900-ec6b3fe15c54

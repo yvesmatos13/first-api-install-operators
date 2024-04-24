@@ -1,0 +1,10 @@
+metadata:
+  name: fuse-apicurito
+  namespace: design
+spec:
+  channel: fuse-apicurito-7.12.x
+  installPlanApproval: Automatic
+  name: fuse-apicurito
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: ""

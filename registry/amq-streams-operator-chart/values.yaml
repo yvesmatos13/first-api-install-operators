@@ -1,0 +1,10 @@
+metadata:
+  name: amq-streams
+  namespace: registry
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: amq-streams
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: "amqstreams.v2.5.0-0"

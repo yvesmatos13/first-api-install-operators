@@ -1,0 +1,11 @@
+---
+# Source: registry-operator-chart/templates/registry-operator-group.yaml
+# Source: rhsso-operator-chart/templates/operator-group.yaml
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: registry-operator-operator-group
+  namespace: registry
+spec:
+  targetNamespaces:
+  - registry

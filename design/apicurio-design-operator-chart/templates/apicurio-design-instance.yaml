@@ -1,0 +1,7 @@
+apiVersion: apicur.io/v1
+kind: Apicurito
+metadata:
+  name: apicurito-service
+  namespace: {{ .Values.metadata.namespace }}
+spec:
+  size: 3

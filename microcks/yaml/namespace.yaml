@@ -1,0 +1,10 @@
+---
+# Source: microcks-operator-chart/templates/namespace.yaml
+# Source: rhsso-operator-chart/templates/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  microcks
+spec:
+  finalizers:
+  - kubernetes

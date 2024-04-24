@@ -1,0 +1,18 @@
+---
+# Source: registry-operator-chart/templates/registry-apicurio-registry.yaml
+apiVersion: registry.apicur.io/v1
+kind: ApicurioRegistry
+metadata:
+  name: apicurio-registry
+  namespace: registry
+spec:
+  configuration:
+    kafkasql:
+      bootstrapServers: 'my-cluster-kafka-bootstrap.registry.svc:9092'
+    persistence: kafkasql
+    security:
+      keycloak:
+        apiClientId: registry-api
+        realm:  registry
+        uiClientId: apicurio-registry
+        url: 'https://sso-rhsso.apps.cluster-qxhp4.qxhp4.sandbox2918.opentlc.com/auth'

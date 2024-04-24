@@ -1,0 +1,17 @@
+---
+# Source: amq-streams-operator-chart/templates/amq-streaams-registry-operator.yaml
+# Source: rhsso-operator-chart/templates/operator.yaml
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: amq-streams
+  namespace: registry
+  labels:
+    operators.coreos.com/service-registry-operator.openshift-operators: ''
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: amq-streams
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: amqstreams.v2.5.0-0

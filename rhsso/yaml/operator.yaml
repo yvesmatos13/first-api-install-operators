@@ -1,0 +1,17 @@
+---
+# Source: rhsso-operator-chart/templates/operator.yaml
+# Source: rhsso-operator-chart/templates/operator.yaml
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: rhsso-operator  
+  namespace: rhsso
+  labels:
+    operators.coreos.com/rhsso-operator.rhsso: ''
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: rhsso-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: rhsso-operator.7.6.5-opr-002

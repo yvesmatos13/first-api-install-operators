@@ -1,0 +1,16 @@
+---
+# Source: rhsso-operator-chart/templates/operator.yaml
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: {{ .Values.metadata.name }}
+  namespace: {{ .Values.metadata.namespace }}
+  labels:
+    operators.coreos.com/microcks.microcks: ''
+spec:
+  channel: {{ .Values.spec.channel }}
+  installPlanApproval: {{ .Values.spec.installPlanApproval }}
+  name: {{ .Values.spec.name }}
+  source: {{ .Values.spec.source }}
+  sourceNamespace: {{ .Values.spec.sourceNamespace }}
+  startingCSV: {{ .Values.spec.startingCSV }}

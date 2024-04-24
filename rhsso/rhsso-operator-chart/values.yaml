@@ -1,0 +1,10 @@
+metadata:
+  name: rhsso
+  namespace: rhsso
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: rhsso-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: "rhsso-operator.7.6.5-opr-002"

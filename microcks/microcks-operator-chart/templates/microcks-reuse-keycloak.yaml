@@ -1,0 +1,24 @@
+apiVersion: microcks.github.io/v1alpha1
+kind: MicrocksInstall
+metadata:
+  name: {{ .Values.metadata.name }}
+  namespace: {{ .Values.metadata.namesopace }}
+spec:
+  name: {{ .Values.metadata.name }}
+  version: {{ .Values.microcks.version }}
+  microcks:
+    replicas: 1
+    url: {{ .Values.microcks.url }}
+  postman:
+    replicas: 1
+  keycloak:
+    install: false
+    realm: {{ .Values.keycloak.realm }}
+    url: {{ .Values.keycloak.url }}
+    #privateUrl: http://apicurio-studio-auth.apicurio.svc.cluster.local:8080 
+    serviceAccount: {{ .Values.keycloak.serviceAccount }}
+    serviceAccountCredentials: {{ .Values.keycloak.serviceAccountCredentials }}
+  mongodb:
+    install: true
+    persistent: true
+    volumeSize: 2Gi

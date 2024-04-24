@@ -1,0 +1,26 @@
+---
+# Source: microcks-operator-chart/templates/microcks-reuse-keycloak.yaml
+apiVersion: microcks.github.io/v1alpha1
+kind: MicrocksInstall
+metadata:
+  name: microcks
+  namespace: 
+spec:
+  name: microcks
+  version: 1.5.2
+  microcks:
+    replicas: 1
+    url: microcks.apps.cluster-qxhp4.qxhp4.sandbox2918.opentlc.com
+  postman:
+    replicas: 1
+  keycloak:
+    install: false
+    realm: microcks
+    url: sso-rhsso.apps.cluster-qxhp4.qxhp4.sandbox2918.opentlc.com:443/auth
+    #privateUrl: http://apicurio-studio-auth.apicurio.svc.cluster.local:8080 
+    serviceAccount: microcks-serviceaccount
+    serviceAccountCredentials: ab54d329-e435-41ae-a900-ec6b3fe15c54
+  mongodb:
+    install: true
+    persistent: true
+    volumeSize: 2Gi

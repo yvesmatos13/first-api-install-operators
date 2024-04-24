@@ -1,0 +1,9 @@
+---
+# Source: rhsso-operator-chart/templates/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  {{ .Values.metadata.name }}
+spec:
+  finalizers:
+  - kubernetes

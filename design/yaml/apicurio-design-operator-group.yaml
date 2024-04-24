@@ -1,0 +1,11 @@
+---
+# Source: apicurio-design-operator-chart/templates/apicurio-design-operator-group.yaml
+# Source: rhsso-operator-chart/templates/operator-group.yaml
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: fuse-apicurito-operator-group
+  namespace: design
+spec:
+  targetNamespaces:
+  - design

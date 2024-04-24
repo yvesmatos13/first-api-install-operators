@@ -1,0 +1,29 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs
+    volume.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs
+  name: system-storage
+  namespace: 3scale
+  ownerReferences:
+    - apiVersion: apps.3scale.net/v1alpha1
+      kind: APIManager
+      name: 3scale-apimanager
+      uid: 53fb84a0-ec55-4aec-81d9-5ea2354f8969
+      controller: true
+      blockOwnerDeletion: true
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app: 3scale-api-management
+    threescale_component: system
+    threescale_component_element: app
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+  storageClassName: gp2
+  volumeMode: Filesystem

@@ -1,0 +1,10 @@
+---
+# Source: registry-operator-chart/templates/registry-namespace.yaml
+# Source: rhsso-operator-chart/templates/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  registry
+spec:
+  finalizers:
+  - kubernetes

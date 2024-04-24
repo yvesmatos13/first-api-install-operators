@@ -1,0 +1,38 @@
+[
+    {
+        "id": "bb35fc0e-1513-4033-a225-b7cc871b13e9",
+        "clientId": "3scale"
+    },
+    {
+        "id": "d620199c-3d0b-428e-85e0-e1201ec38aae",
+        "clientId": "41583d4f"
+    },
+    {
+        "id": "b0782234-b110-425c-a305-1cae6cb2d679",
+        "clientId": "account"
+    },
+    {
+        "id": "1202847c-a6c6-44b1-8ab1-5f5e48327f38",
+        "clientId": "account-console"
+    },
+    {
+        "id": "cedcb8c6-d7bf-4182-8002-9b896611229c",
+        "clientId": "admin-cli"
+    },
+    {
+        "id": "1e8fc503-dff8-4117-baf9-22fc47344159",
+        "clientId": "broker"
+    },
+    {
+        "id": "e9ef5a09-b2f5-46cf-8ff7-cb1423defaae",
+        "clientId": "cc6557da"
+    },
+    {
+        "id": "ac5387c4-ae23-4ab1-960b-c7b1c5e543b9",
+        "clientId": "realm-management"
+    },
+    {
+        "id": "e2099f5a-ddb7-4266-ba18-8f26ee161bac",
+        "clientId": "security-admin-console"
+    }
+]

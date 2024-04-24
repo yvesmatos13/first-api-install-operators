@@ -1,0 +1,15 @@
+metadata:
+  name: registry
+  namespace: registry
+spec:
+  channel: 2.x
+  installPlanApproval: Automatic
+  name: service-registry-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: "service-registry-operator.v2.2.2"
+rhsso:
+  url: https://sso-rhsso.apps.cluster-qxhp4.qxhp4.sandbox2918.opentlc.com/auth
+  apiClientId: registry-api
+  realm: registry
+  uiClientId: apicurio-registry

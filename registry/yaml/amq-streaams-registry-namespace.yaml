@@ -1,0 +1,10 @@
+---
+# Source: amq-streams-operator-chart/templates/amq-streaams-registry-namespace.yaml
+# Source: rhsso-operator-chart/templates/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  registry
+spec:
+  finalizers:
+  - kubernetes
